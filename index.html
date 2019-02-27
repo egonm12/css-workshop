@@ -21,7 +21,7 @@
     <!-- The toasts will be rendered into here -->
     <div id="toasts"></div>
 
-    <!-- These are the toasts -->
+    <!-- Info toast template -->
     <template>
       <div>
         (i)
@@ -30,28 +30,33 @@
       </div>
     </template>
 
+    <!-- Confirmation toast template -->
+    <!-- This toast closes itself after 5 seconds -->
     <template>
-      <!-- This toast closes itself after 5 seconds -->
       <div>
         (✓)
         The settings have been updated.
       </div>
     </template>
 
+    <!-- Warning toast template -->
+    <!-- Clicking [Undo] executes some JavaScript -->
     <template>
       <div>
         (!)
         The message has been deleted.
-        [Undo] <!-- Executes some JavaScript -->
+        [Undo]
         [X]
       </div>
     </template>
 
+    <!-- Alert toast template -->
+    <!-- Clicking [Go to inbox] navigates to different page -->
     <template>
       <div>
         (X)
         An urgent message has arrived!
-        [Go to inbox] <!-- Navigates to different page -->
+        [Go to inbox]
         [X]
       </div>
     </template>
