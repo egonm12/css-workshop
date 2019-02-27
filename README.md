@@ -4,9 +4,9 @@ We're going to make a [toast notification](https://www.patternfly.org/pattern-li
 
 ## Get started
 
-1. Install [Eleventy](npm install -g @11ty/eleventy) to automate some development processes
-2. Open `index.html` in your favorite editor
-3. Start adding a toast!
+1. Go to the skeleton setup in the `site` directory.
+2. Open `index.html` and `stylesheet.css` in your favorite editor.
+3. Start fleshing out the ultra-basic example toast with proper HTML and CSS!
 
 ## Specs
 
