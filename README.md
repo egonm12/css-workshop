@@ -14,6 +14,8 @@ The goal is to get a few basic concepts right, and avoid legacy solutions, anti-
 
 Some basic CSS has already been added: a [CSS reset](https://meyerweb.com/eric/tools/css/reset/), and a proper [box model](https://www.paulirish.com/2012/box-sizing-border-box-ftw/). They're both included in the `reset.css` file, which you don't have to work in for this workshop, but you're of course free to investigate what goes on there.
 
+A tiny bit of JavaScript is used to add toasts to the page, either by clicking a button or with an interval of 5 seconds. You can configure this in the top of the `index.html` document.
+
 ## Instructions
 
 Create a toast that has:
