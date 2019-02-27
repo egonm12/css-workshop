@@ -1,14 +1,16 @@
-if(useMessage === "interval") {
+// Start periodic addition of toast
+if(useToast === "interval") {
   setInterval(function() {
     renderToast(Math.floor(Math.random() * Math.floor(4)));
-  }, 1000);
+  }, (toastInterval * 1000));
 }
 
+// Handle click on button
 function addToast() {
-  if(isNaN(useMessage)) {
+  if(isNaN(useToast)) {
     msg = Math.floor(Math.random() * Math.floor(4));
   } else {
-    msg = useMessage;
+    msg = useToast;
   }
   renderToast(msg);
 }
@@ -17,7 +19,7 @@ function addToast() {
 function renderToast(msg) {
   var messages = document.getElementsByTagName('template'),
     target = document.getElementById('toasts'),
-    addedMessage = messages[msg].content.cloneNode(true);
+    newToast = messages[msg].content.cloneNode(true);
 
-  target.appendChild(addedMessage);
+  target.appendChild(newToast);
 }
