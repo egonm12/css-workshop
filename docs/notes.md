@@ -145,6 +145,6 @@ three:
 four:
   type: alert
   text: An urgent message has arrived!
-  closable: false
+  closable: true
   action: Go to inbox
   onAction: [navigate to other page]

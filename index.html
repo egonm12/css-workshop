@@ -9,7 +9,7 @@
       // 0, 1, 2 or 3 = target specific message
       // "random"     = add random message
       // "interval"   = add random message every 5 seconds
-      var useMessage = "random";
+      var useMessage = "interval";
     </script>
     <script src="./javascript.js"></script>
   </head>
@@ -24,25 +24,35 @@
     <!-- These are the toasts -->
     <template>
       <div>
-        Hey!
+        (i)
+        Welcome back!
+        [X]
+      </div>
+    </template>
+
+    <template>
+      <!-- This toast closes itself after 5 seconds -->
+      <div>
+        (✓)
+        The settings have been updated.
       </div>
     </template>
 
     <template>
       <div>
-        Ho!
+        (!)
+        The message has been deleted.
+        [Undo] <!-- Executes some JavaScript -->
+        [X]
       </div>
     </template>
 
     <template>
       <div>
-        Let's!
-      </div>
-    </template>
-
-    <template>
-      <div>
-        Go!
+        (X)
+        An urgent message has arrived!
+        [Go to inbox] <!-- Navigates to different page -->
+        [X]
       </div>
     </template>
 
