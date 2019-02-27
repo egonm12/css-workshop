@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toasty!</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script>
+      // 0, 1, 2 or 3 = target specific message
+      // "random"     = add random message
+      // "interval"   = add random message every 5 seconds
+      var useMessage = "random";
+    </script>
+    <script src="./javascript.js"></script>
+  </head>
+
+  <body>
+
+    <button onclick="addToast()">Add toast</button>
+
+    <!-- The toasts will be rendered into here -->
+    <div id="toasts"></div>
+
+    <!-- These are the toasts -->
+    <template>
+      <div>
+        Hey!
+      </div>
+    </template>
+
+    <template>
+      <div>
+        Ho!
+      </div>
+    </template>
+
+    <template>
+      <div>
+        Let's!
+      </div>
+    </template>
+
+    <template>
+      <div>
+        Go!
+      </div>
+    </template>
+
+  </body>
+</html>
