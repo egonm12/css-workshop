@@ -20,7 +20,7 @@ A tiny bit of JavaScript is used to add toasts to the page, either by clicking a
 
 Create a toast that has:
 
-- *An icon on the left.* Color and icon can be changed per message
+- An icon on the left
 - An unkown amount of text
 - An optional button related to the text ("Undo")
 - An optional button related to the toast ("Close)
