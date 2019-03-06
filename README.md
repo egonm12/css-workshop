@@ -1,8 +1,8 @@
 # Modern CSS crash course
 
-We're going to make a [toast notification](https://www.patternfly.org/pattern-library/communication/toast-notifications/). This might look like a simple UI element, but it allows us to touch on many CSS/layout concepts.
+We're going to make a [toast notification](https://www.patternfly.org/pattern-library/communication/toast-notifications/). This might look like a simple UI element — but looks can be deceiving! A well made toast allows us to touch on many CSS/layout concepts.
 
-The focus is on the HTML and the CSS you'll write. We'll do this as "close to the metal" as possible: no build tools, frameworks, processors or anything!
+The focus is on the HTML and the CSS you'll write. We'll do this as "close to the metal" as possible: no build tools, frameworks, processors or anything! We're not even going touching JavaScript.
 
 The goal is to get a few basic concepts right, and avoid legacy solutions, anti-patterns and bad practices.
 
@@ -12,7 +12,7 @@ The goal is to get a few basic concepts right, and avoid legacy solutions, anti-
 2. Open `index.html` and `stylesheet.css` in your favorite editor
 3. Start fleshing out the ultra-basic example toast with proper HTML and CSS!
 
-Some basic CSS has already been added: a [CSS reset](https://meyerweb.com/eric/tools/css/reset/), and a proper [box model](https://www.paulirish.com/2012/box-sizing-border-box-ftw/). They're both included in the `reset.css` file, which you don't have to work in for this workshop, but you're of course free to investigate what goes on there.
+Some basic CSS has already been added: a [CSS reset](https://meyerweb.com/eric/tools/css/reset/), and a proper [box model](https://www.paulirish.com/2012/box-sizing-border-box-ftw/). They're both included in the `init.css` file, which you don't have to work in for this workshop, but you're of course free to investigate what goes on there.
 
 A tiny bit of JavaScript is used to add toasts to the page, either by clicking a button or with an interval of 5 seconds. You can configure this in the top of the `index.html` document.
 
@@ -26,6 +26,10 @@ Create a toast that has:
 - An optional button related to the toast ("Close)
 
 New toasts need to be added to the list of already present toasts, if there are any.
+
+## Browser support
+
+You're in luck! We're targetting new browsers only: Edge, Chrome, Firefox, Safari. Bonus points if it works in IE11 though!
 
 ## Pre-study material
 
