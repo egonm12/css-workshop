@@ -1,13 +1,21 @@
+:root {
+  --toast-offset: 1rem; /* Keep away from edge of viewport */
+}
+
 body {
   font-family: monospace;
 }
 
-/* Container for individual toast */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Container for the toasts */
 .toast-container {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: calc(100% - 2rem);
+  bottom: var(--toast-offset);
+  right: var(--toast-offset);
+  width: calc(100% - calc(var(--toast-offset) * 2));
   max-width: 32rem;
   display: flex;
   flex-direction: column;
@@ -17,6 +25,7 @@ body {
 /* Styling configuration for each type of toast */
 .toast-info {
   --icon-color: #777;
+  --undo-color: orangered;
 }
 
 /* Styling for individual toasts */
@@ -28,13 +37,23 @@ body {
   background: white;
   box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
+  animation: slideToast 500ms ease-out;
+}
+
+.toast > *:not(:last-child) {
+  margin-right: 0.5rem;
 }
 
 .toast + .toast {
   margin-top: 0.5rem;
 }
 
-
+@keyframes slideToast {
+  from {
+    transform: translateX(calc(100% + var(--toast-offset)));
+    opacity: 0;
+  }
+}
 
 /* Icon indicating the type of toast */
 .toast-icon {
@@ -53,21 +72,25 @@ body {
   fill: rgba(255, 255, 255, 0.8);
 }
 
-
 /* The actual toast message */
 .toast-text {
   flex: auto;
-  padding: 0.5rem;
 }
 
 /* When present, style the close button */
-.toast-close {
-  cursor: pointer;
+.toast-close-button {
   flex: none;
   width: 2rem;
   height: 2rem;
   background-image: url("../assets/cross.svg");
-  background-size: 1rem;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.toast-action-button {
+  background: var(--undo-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
 }

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./css/init.css">
     <link rel="stylesheet" href="./css/stylesheet.css">
     <script>
-      // 0, 1, 2 or 3 = target specific message
+      // 0, 1 or 2    = target specific message
       // "random"     = add random message
       // "interval"   = add random message every 5 seconds
-      var useToast = 0;
+      var useToast = 1;
       // Number of seconds to add a new toast
       var toastInterval = 5;
     </script>
@@ -26,35 +26,38 @@
 
     <!-- Info toast template -->
     <template>
+
       <li class="toast toast-info">
         <div class="toast-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>
+            <svg
+              role="presentation"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>
         </div>
         <p class="toast-text">
           Welcome back!
         </p>
-        <button class="toast-close" type="button"></button>
+        <button class="toast-close-button" type="button" aria-label="Close"></button>
       </li>
-    </template>
 
-    <!-- Confirmation toast template -->
-    <!-- This toast closes itself after 5 seconds -->
-    <template>
-      <div>
-        (✓)
-        The settings have been updated.
-      </div>
     </template>
 
     <!-- Warning toast template -->
     <!-- Clicking [Undo] executes some JavaScript -->
     <template>
-      <div>
-        (!)
-        The message has been deleted.
-        [Undo]
-        [X]
-      </div>
+      <li class="toast toast-info">
+        <div class="toast-icon">
+            <svg
+              role="presentation"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></svg>
+        </div>
+        <p class="toast-text">
+          The message has been deleted.
+        </p>
+        <button class="toast-action-button" type="button">Undo</button>
+        <button class="toast-close-button" type="button" aria-label="Close"></button>
+      </li>
     </template>
 
     <!-- Alert toast template -->
