@@ -10,15 +10,15 @@ I assume you have written _some_ CSS, so let's quickly go through some basics:
 
 ## Quick intro
 
-- Flexbox
-- Animations
-- Transitions
-- CSS custom properties
-- Accessibility (a11y)
+- [Flexbox](10-flexbox.md)
+- [Animations](11-animations.md)
+- [Transitions]()
+- [CSS custom properties]()
+- [Accessibility (a11y)]()
 
-# Cheat sheet / instructions
+# Cheat sheet / tips
 
-## Avoid these
+## Things to avoid
 
 - Overly specific selectors
 - Pixel values
