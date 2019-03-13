@@ -1,6 +1,10 @@
 :root {
+  --link-color: dodgerblue;
   --toast-offset: 1rem; /* Keep away from edge of viewport */
-  --toast-action-button-color: #ddd;
+
+  --toast-close-button-background: #ddd;
+  --toast-action-button-background: var(--link-color);
+  --toast-action-button-color: white;
 }
 
 body {
@@ -8,11 +12,15 @@ body {
 }
 
 button:focus {
-  outline: 2px solid blue;
+  outline: 2px solid var(--link-color);
 }
 
 button:active {
   transform: scale(0.95);
+}
+
+a {
+  color: var(--link-color);
 }
 
 /* Container for the toasts */
@@ -45,15 +53,16 @@ button:active {
   flex: none;
   display: flex;
   align-items: center;
-  border: 1px solid var(--main-toast-color);
+  border: 2px solid var(--main-toast-color);
   background: white;
-  box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   animation: slideToast 500ms ease-out;
 }
 
-.toast > *:not(:last-child) {
+.toast > * {
   margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .toast + .toast {
@@ -69,6 +78,8 @@ button:active {
 
 /* Icon indicating the type of toast */
 .toast-icon {
+  margin-top: 0;
+  margin-bottom: 0;
   flex: none;
   align-self: stretch;
   width: 2.5rem;
@@ -92,16 +103,20 @@ button:active {
 /* When present, style the close button */
 .toast-close-button {
   flex: none;
-  width: 2rem;
-  height: 2rem;
+  background: var(--toast-close-button-background);
+  width: 1.5rem;
+  height: 1.5rem;
   background-image: url("../assets/cross.svg");
-  background-size: 50%;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 0.25rem;
 }
 
 .toast-action-button {
-  background: var(--toast-action-button-color);
-  padding: 0.25rem 0.5rem;
+  background: var(--toast-action-button-background);
+  color: var(--toast-action-button-color);
+  padding: 0 0.5rem;
+  height: 1.5rem;
   border-radius: 0.25rem;
 }
