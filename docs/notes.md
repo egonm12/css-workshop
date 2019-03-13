@@ -1,3 +1,7 @@
+NOTE!
+- We need JS to do the "this toast removes itself after 5 seconds"
+- Make toast show up without having to click a button
+
 # Aanwezigen:
 
 https://docs.google.com/spreadsheets/d/1-pf8bsM2i_3-kz2-zMWMv6LXsgQn2YOHG-Cg-pRXVeo/edit#gid=0

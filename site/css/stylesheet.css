@@ -1,3 +1,73 @@
 body {
   font-family: monospace;
 }
+
+/* Container for individual toast */
+.toast-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: calc(100% - 2rem);
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Styling configuration for each type of toast */
+.toast-info {
+  --icon-color: #777;
+}
+
+/* Styling for individual toasts */
+.toast {
+  flex: none;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--icon-color);
+  background: white;
+  box-shadow: 0.125rem 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.toast + .toast {
+  margin-top: 0.5rem;
+}
+
+
+
+/* Icon indicating the type of toast */
+.toast-icon {
+  flex: none;
+  align-self: stretch;
+  width: 2.5rem;
+  background: var(--icon-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-icon svg {
+  width: 1rem;
+  height: 1rem;
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+
+/* The actual toast message */
+.toast-text {
+  flex: auto;
+  padding: 0.5rem;
+}
+
+/* When present, style the close button */
+.toast-close {
+  cursor: pointer;
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../assets/cross.svg");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}

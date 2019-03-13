@@ -10,7 +10,7 @@
       // 0, 1, 2 or 3 = target specific message
       // "random"     = add random message
       // "interval"   = add random message every 5 seconds
-      var useToast = "interval";
+      var useToast = 0;
       // Number of seconds to add a new toast
       var toastInterval = 5;
     </script>
@@ -22,15 +22,19 @@
     <button onclick="addToast()">Add toast</button>
 
     <!-- The toasts will be rendered into here -->
-    <div id="toasts"></div>
+    <ul id="toasts" class="toast-container"></ul>
 
     <!-- Info toast template -->
     <template>
-      <div>
-        (i)
-        Welcome back!
-        [X]
-      </div>
+      <li class="toast toast-info">
+        <div class="toast-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg>
+        </div>
+        <p class="toast-text">
+          Welcome back!
+        </p>
+        <button class="toast-close" type="button"></button>
+      </li>
     </template>
 
     <!-- Confirmation toast template -->
@@ -63,6 +67,10 @@
         [X]
       </div>
     </template>
+
+    <script>
+      addToast();
+    </script>
 
   </body>
 </html>
