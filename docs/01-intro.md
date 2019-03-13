@@ -30,5 +30,6 @@ I assume you have written _some_ CSS, so let's quickly go through some basics:
 
 - [MDN](https://developer.mozilla.org/en-US/)
 - [CSS Tricks](https://css-tricks.com/almanac/)
+- [A11y](https://inclusive-components.design/) (specifically [notifications](https://inclusive-components.design/notifications/) for this workshop)
 
 I usually just ~~Google~~ DuckDuckGo my questions: `mdn button` or `css tricks flexbox`

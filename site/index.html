@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -20,15 +20,21 @@
 
 <body>
 
-  <button onclick="addToast()" style="padding:1rem;background:hotpink">Add toast</button>
+  <main>
+    <h1>Toasty!</h1>
+    Push button for toast:
+    <button onclick="addToast()" style="padding:0.25rem;background:hotpink">Add toast</button>
 
-  <!-- The toasts will be rendered into here -->
-  <ul id="toasts" class="toast-container"></ul>
+    <!-- The toasts will be rendered into here -->
+    <div role="status" aria-live="polite" aria-relevant="additions">
+      <ul id="toasts" class="toast-container"></ul>
+    </div>
+  </main>
 
   <!-- Info toast template -->
   <template>
 
-    <li class="toast toast-info">
+    <li class="toast toast-info"    >
       <div class="toast-icon">
         <svg role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
           <path
@@ -38,7 +44,7 @@
       <p class="toast-text">
         Welcome back!
       </p>
-      <button class="toast-close-button" type="button" aria-label="Close"></button>
+      <button class="toast-close-button" type="button" aria-label="Close" onclick="closeToast(this)"></button>
     </li>
 
   </template>
@@ -56,7 +62,7 @@
         The message has been deleted.
       </p>
       <button class="toast-action-button" type="button">Undo</button>
-      <button class="toast-close-button" type="button" aria-label="Close"></button>
+      <button class="toast-close-button" type="button" aria-label="Close" onclick="closeToast(this)"></button>
     </li>
   </template>
 
@@ -69,8 +75,8 @@
       <p class="toast-text">
         An urgent message has arrived!
       </p>
-      <a href="index.html?inbox=true">Go to inbox</a>
-      <button class="toast-close-button" type="button" aria-label="Close"></button>
+      <a href="https://pixelambacht.nl">Go to inbox</a>
+      <button class="toast-close-button" type="button" aria-label="Close" onclick="closeToast(this)"></button>
     </li>
   </template>
 
