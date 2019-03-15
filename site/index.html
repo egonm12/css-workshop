@@ -19,10 +19,29 @@
 
   <body>
 
-    <button onclick="addToast()">Add toast</button>
+    <header>
+      <button onclick="addToast()">+</button>
+      <div>Toasty app</div>
+    </header>
 
-    <!-- The toasts will be rendered into here -->
-    <div id="toasts"></div>
+    <main id="toasts"></main>
+
+    <footer>
+      <button onclick="clearToasts()">Clear all toasts</button>
+    </footer>
+
+
+
+    <!--
+
+
+      What follows now are <template> tags that hold the design for
+      the individual toasts. The content of these templates isn't being
+      rendered, but we clone them and inject them in the DOM instead.
+
+
+
+    -->
 
     <!-- Info toast template -->
     <template>
@@ -54,6 +73,10 @@
         [X]
       </div>
     </template>
+
+    <script>
+      updateCount();
+    </script>
 
   </body>
 </html>
