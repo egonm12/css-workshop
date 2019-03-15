@@ -1,0 +1,64 @@
+:root {
+  --link-color: dodgerblue;
+  --toast-offset: 1rem; /* Keep away from edge of viewport */
+
+  --toast-close-button-background: #ddd;
+  --toast-action-button-background: var(--link-color);
+  --toast-action-button-color: white;
+}
+
+/* Some basic setup */
+body {
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+button:focus {
+  outline: 2px solid var(--link-color);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+a {
+  color: var(--link-color);
+}
+
+/* Header */
+header {
+  --header-width: 3rem;
+
+  background: hotpink;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex: none;
+  height: var(--header-width);
+}
+
+header button {
+  width: var(--header-width);
+  background: plum;
+}
+
+.counter {
+  width: var(--header-width);
+  background: greenyellow;
+}
+
+/* Main */
+main {
+  background: gold;
+  flex: auto;
+  overflow: auto;
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  background: lime;
+  flex: none;
+}

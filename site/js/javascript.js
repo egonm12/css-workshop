@@ -1,5 +1,5 @@
 // Start periodic addition of toast
-if(useToast === "interval") {
+if(useToast === 'interval') {
   setInterval(function() {
     renderToast(Math.floor(Math.random() * Math.floor(3)));
   }, (toastInterval * 1000));
@@ -20,6 +20,15 @@ function closeToast(e) {
   e.parentNode.remove();
 }
 
+function clearToasts() {
+  var container = document.getElementById('toasts');
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  updateCount();
+}
+
 // Take a template and add it to the toasts container
 function renderToast(msg) {
   var messages = document.getElementsByTagName('template'),
@@ -31,5 +40,24 @@ function renderToast(msg) {
   newToast.querySelector("li").setAttribute("aria-describedby", randomID);
   newToast.querySelector("p").setAttribute("id", randomID);
 
-  target.appendChild(newToast);
+  target.prepend(newToast);
+
+  updateCount();
+}
+
+// Show icon when we have one or more toasts visible
+function updateCount() {
+  var visibleToasts = document.getElementById('toasts').children.length,
+    counterEl = document.querySelector('.counter');
+
+  if(visibleToasts === 0 && counterEl) {
+    counterEl.remove();
+  } else {
+    if(!counterEl) {
+      var counterEl = document.createElement('div');
+      counterEl.className = 'counter';
+      counterEl.innerHTML = '🍞'
+      document.querySelector('header').appendChild(counterEl);
+    }
+  }
 }

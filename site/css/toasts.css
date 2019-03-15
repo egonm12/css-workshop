@@ -1,35 +1,5 @@
-:root {
-  --link-color: dodgerblue;
-  --toast-offset: 1rem; /* Keep away from edge of viewport */
-
-  --toast-close-button-background: #ddd;
-  --toast-action-button-background: var(--link-color);
-  --toast-action-button-color: white;
-}
-
-body {
-  font-family: monospace;
-}
-
-button:focus {
-  outline: 2px solid var(--link-color);
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-a {
-  color: var(--link-color);
-}
-
 /* Container for the toasts */
 .toast-container {
-  position: fixed;
-  bottom: var(--toast-offset);
-  right: var(--toast-offset);
-  width: calc(100% - calc(var(--toast-offset) * 2));
-  max-width: 32rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
