@@ -2,14 +2,21 @@
 
 I assume you have written _some_ CSS, so let's quickly go through some basics:
 
+## Prerequisites
+
+- Install the [axe extension](https://www.deque.com/axe/) to test your a11y.
+
+Note: your page has to be served (as opposed to be loaded from the filesystem) for the axe extension to work, e.g. through `python -m SimpleHTTPServer`.
+
 ## Quick refresh
 
 - [Selectors](02-selectors.md)
 - [Units](03-units.md)
 - [Layout](04-layout.md)
 
-## Quick intro
+## Focus of the workshop
 
+- Semantic HTML
 - [Flexbox](10-flexbox.md)
 - [Animations](11-animations.md)
 - [Transitions]()
@@ -17,6 +24,11 @@ I assume you have written _some_ CSS, so let's quickly go through some basics:
 - [Accessibility (a11y)]()
 
 # Cheat sheet / tips
+
+## Things to do
+
+- Make things look slick
+- Make things work without mouse
 
 ## Things to avoid
 

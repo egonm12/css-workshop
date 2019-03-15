@@ -26,5 +26,10 @@ function renderToast(msg) {
     target = document.getElementById('toasts'),
     newToast = messages[msg].content.cloneNode(true);
 
+  var randomID = Math.random().toString(36).slice(2);
+
+  newToast.querySelector("li").setAttribute("aria-describedby", randomID);
+  newToast.querySelector("p").setAttribute("id", randomID);
+
   target.appendChild(newToast);
 }

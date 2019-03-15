@@ -11,7 +11,7 @@
     // 0, 1 or 2    = target specific message
     // "random"     = add random message
     // "interval"   = add random message every 5 seconds
-    var useToast = "random";
+    var useToast = "interval";
     // Number of seconds to add a new toast
     var toastInterval = 5;
   </script>
@@ -34,7 +34,7 @@
   <!-- Info toast template -->
   <template>
 
-    <li class="toast toast-info"    >
+    <li role="alertdialog" aria-label="Notification" class="toast toast-info">
       <div class="toast-icon">
         <svg role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512">
           <path
@@ -51,7 +51,7 @@
 
   <!-- Warning toast template -->
   <template>
-    <li class="toast toast-warning">
+    <li role="alertdialog" aria-label="Warning" class="toast toast-warning">
       <div class="toast-icon">
         <svg role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
           <path
@@ -68,7 +68,7 @@
 
   <!-- Alert toast template -->
   <template>
-    <li class="toast toast-alert">
+    <li role="alertdialog" aria-label="Alert" class="toast toast-alert">
       <div class="toast-icon">
         <svg role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></svg>
       </div>
@@ -81,7 +81,7 @@
   </template>
 
   <script>
-    addToast();
+    // addToast();
   </script>
 
 </body>
