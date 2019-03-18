@@ -8,9 +8,8 @@ The goal is to get a few basic HTML/CSS concepts right, and avoid legacy solutio
 
 ## Set up
 
-1. Go to the skeleton setup in the `site` directory.
-2. Open `index.html` and `stylesheet.css` in your favorite editor
-3. Start fleshing out the ultra-basic example toast with proper HTML and CSS!
+1. Open `index.html` and `css/stylesheet.css` in your favorite editor
+2. Start fleshing out the ultra-basic example toast with proper HTML and CSS!
 
 Some basic CSS has already been added: a [CSS reset](https://meyerweb.com/eric/tools/css/reset/), and a proper [box model](https://www.paulirish.com/2012/box-sizing-border-box-ftw/). They're both included in the `init.css` file, which you don't have to work in for this workshop, but you're of course free to investigate what goes on there.
 
