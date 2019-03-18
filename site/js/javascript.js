@@ -18,6 +18,8 @@ function addToast() {
 // Handle click on close button of toast
 function closeToast(e) {
   e.parentNode.remove();
+
+  updateCount();
 }
 
 function clearToasts() {
@@ -55,7 +57,6 @@ function updateCount() {
   } else if(visibleToasts > 0 && !counterEl) {
     var counterEl = document.createElement('div');
     counterEl.className = 'counter';
-    counterEl.innerHTML = '🍞'
     document.querySelector('header').appendChild(counterEl);
   }
 }

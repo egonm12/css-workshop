@@ -4,7 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toasty!</title>
     <link rel="stylesheet" href="./css/init.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/toasts.css">
     <script>
       // 0, 1, 2    = target specific message
@@ -20,7 +24,9 @@
   <body>
 
     <header>
-      <button onclick="addToast()">+</button>
+      <button onclick="addToast()" class="add-toast">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>
+      </button>
       <h1>Toasty app</h1>
       <!-- A .counter div will be dynamically added/removed here -->
     </header>
@@ -90,7 +96,7 @@
       <p class="toast-text">
         An urgent message has arrived!
       </p>
-      <a href="https://pixelambacht.nl">Go to inbox</a>
+      <a href="https://pixelambacht.nl" class="toast-link">Go to inbox</a>
       <button class="toast-close-button" type="button" aria-label="Close" onclick="closeToast(this)"></button>
     </li>
   </template>

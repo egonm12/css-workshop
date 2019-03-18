@@ -44,4 +44,10 @@ Note: your page has to be served (as opposed to be loaded from the filesystem) f
 - [CSS Tricks](https://css-tricks.com/almanac/)
 - [A11y](https://inclusive-components.design/) (specifically [notifications](https://inclusive-components.design/notifications/) for this workshop)
 
+## Useful sites
+
+- [SVG icons](https://fontawesome.com/icons?d=gallery&q=plus)
+- [Nice gradients](https://www.grabient.com/)
+- [Fancy CSS animations](http://bouncejs.com/)
+
 I usually just ~~Google~~ DuckDuckGo my questions: `mdn button` or `css tricks flexbox`
