@@ -7,6 +7,7 @@ footer {
   align-items: top;
   display: flex;
   height: var(--footer-height);
+  background: linear-gradient(to bottom, transparent, white);
 }
 
 footer button {
@@ -17,4 +18,5 @@ footer button {
   color: var(--clear-button-text);
   border-radius: var(--border-radius);
   text-transform: uppercase;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }

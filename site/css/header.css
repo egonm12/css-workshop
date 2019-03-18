@@ -8,7 +8,7 @@ header {
   flex: none;
   height: var(--header-height);
   position: relative;
-  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 header h1 {

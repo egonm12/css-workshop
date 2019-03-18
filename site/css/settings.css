@@ -15,7 +15,7 @@
 
   --header-background: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   --header-text: white;
-  --header-height: 3rem;
+  --header-height: 4rem;
 
   --footer-height: 4rem;
   --clear-button-background: var(--header-background);
