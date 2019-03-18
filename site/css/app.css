@@ -15,6 +15,10 @@ body {
   height: 100%;
 }
 
+button, table {
+  font-family: inherit;
+}
+
 button:focus {
   outline: 2px solid var(--link-color);
 }
@@ -33,10 +37,20 @@ header {
 
   background: hotpink;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: stretch;
   flex: none;
   height: var(--header-width);
+}
+
+header h1 {
+  align-self: center;
+  flex: auto;
+  text-align: center;
+}
+
+header h1:last-child {
+  margin-right: var(--header-width);
 }
 
 header button {
@@ -47,6 +61,9 @@ header button {
 .counter {
   width: var(--header-width);
   background: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Main */
@@ -61,4 +78,8 @@ main {
 footer {
   background: lime;
   flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }

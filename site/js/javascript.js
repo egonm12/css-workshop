@@ -52,12 +52,10 @@ function updateCount() {
 
   if(visibleToasts === 0 && counterEl) {
     counterEl.remove();
-  } else {
-    if(!counterEl) {
-      var counterEl = document.createElement('div');
-      counterEl.className = 'counter';
-      counterEl.innerHTML = '🍞'
-      document.querySelector('header').appendChild(counterEl);
-    }
+  } else if(visibleToasts > 0 && !counterEl) {
+    var counterEl = document.createElement('div');
+    counterEl.className = 'counter';
+    counterEl.innerHTML = '🍞'
+    document.querySelector('header').appendChild(counterEl);
   }
 }
