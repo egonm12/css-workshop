@@ -18,6 +18,8 @@ function addToast() {
 // Handle click on close button of toast
 function closeToast(e) {
   e.parentNode.remove();
+
+  updateCount();
 }
 
 function clearToasts() {
@@ -35,22 +37,27 @@ function renderToast(msg) {
     target = document.getElementById('toasts'),
     newToast = messages[msg].content.cloneNode(true);
 
-  target.appendChild(newToast);
+  var randomID = Math.random().toString(36).slice(2);
+
+  // newToast.querySelector("li").setAttribute("aria-describedby", randomID);
+  // newToast.querySelector("p").setAttribute("id", randomID);
+
+  target.prepend(newToast);
 
   updateCount();
 }
 
 // Show icon when we have one or more toasts visible
 function updateCount() {
-  var visibleToasts = document.getElementById('toasts').children.length;
-  if(visibleToasts === 0) {
-    document.querySelector('.counter').remove();
-  } else {
-    if(!document.querySelector('.counter')) {
-      var counterEl = document.createElement('div');
-      counterEl.className = 'counter';
-      counterEl.innerHTML = '🍞'
-      document.querySelector('header').appendChild(counterEl);
-    }
+  var visibleToasts = document.getElementById('toasts').children.length,
+    counterEl = document.querySelector('.counter');
+
+  if(visibleToasts === 0 && counterEl) {
+    counterEl.remove();
+  } else if(visibleToasts > 0 && !counterEl) {
+    var counterEl = document.createElement('div');
+    counterEl.className = 'counter';
+    counterEl.innerHTML = '🛎';
+    document.querySelector('header').appendChild(counterEl);
   }
 }
