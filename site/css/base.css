@@ -1,6 +1,6 @@
 /* Some basic setup */
 body {
-  font-family: monospace;
+  font-family: sans-serif, monospace;
   display: flex;
   flex-direction: column;
   height: 100%;

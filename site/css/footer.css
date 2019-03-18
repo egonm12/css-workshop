@@ -10,10 +10,11 @@ footer {
 }
 
 footer button {
+  font-weight: bold;
   height: 80%;
   padding: 0 2rem;
   background: var(--clear-button-background);
   color: var(--clear-button-text);
-  border-radius: 9999px;
+  border-radius: var(--border-radius);
   text-transform: uppercase;
 }

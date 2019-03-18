@@ -1,16 +1,23 @@
 :root {
   --link-color: dodgerblue;
+
+  --border-radius: 0.25rem;
+
   --toast-offset: 1rem; /* Keep away from edge of viewport */
+
+  --info-toast-background: #777;
+  --warning-toast-background: orange;
+  --main-toast-background: red;
 
   --toast-close-button-background: #ddd;
   --toast-action-button-background: var(--link-color);
   --toast-action-button-color: white;
 
-  --header-background: hotpink;
+  --header-background: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   --header-text: white;
   --header-height: 3rem;
 
-  --footer-height: 3rem;
-  --clear-button-background: lime;
-  --clear-button-text: hotpink;
+  --footer-height: 4rem;
+  --clear-button-background: var(--header-background);
+  --clear-button-text: white;
 }

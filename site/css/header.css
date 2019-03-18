@@ -27,7 +27,7 @@ header h1:last-child {
 }
 
 .add-toast svg {
-  height: 50%;
+  height: calc(var(--header-height) * 0.5);
   fill: currentColor;
 }
 
@@ -37,4 +37,8 @@ header h1:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../assets/bell.svg");
+  background-size: calc(var(--header-height) * 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
 }

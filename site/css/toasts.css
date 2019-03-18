@@ -7,15 +7,15 @@
 
 /* Styling configuration for each type of toast */
 .toast-info {
-  --main-toast-color: #777;
+  --main-toast-color: var(--info-toast-background);
 }
 
 .toast-warning {
-  --main-toast-color: orange;
+  --main-toast-color: var(--warning-toast-background);
 }
 
 .toast-alert {
-  --main-toast-color: red;
+  --main-toast-color: var(--main-toast-background);
 }
 
 /* Styling for individual toasts */
@@ -25,7 +25,7 @@
   align-items: center;
   border: 2px solid var(--main-toast-color);
   background: white;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   animation: slideToast 500ms ease-out;
 }
 
@@ -70,7 +70,11 @@
   flex: auto;
 }
 
-/* When present, style the close button */
+/* Buttons and links inside the toast */
+.toast-link {
+  white-space: nowrap;
+}
+
 .toast-close-button {
   flex: none;
   background: var(--toast-close-button-background);
@@ -80,7 +84,7 @@
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }
 
 .toast-action-button {
@@ -88,5 +92,5 @@
   color: var(--toast-action-button-color);
   padding: 0 0.5rem;
   height: 1.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }
