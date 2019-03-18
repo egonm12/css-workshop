@@ -1,0 +1,40 @@
+/* Header */
+header {
+  background: var(--header-background);
+  color: var(--header-text);
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: stretch;
+  flex: none;
+  height: var(--header-height);
+  position: relative;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  align-self: center;
+  flex: auto;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+header h1:last-child {
+  margin-right: var(--header-height);
+}
+
+.add-toast {
+  width: var(--header-height);
+}
+
+.add-toast svg {
+  height: 50%;
+  fill: currentColor;
+}
+
+.counter {
+  width: var(--header-height);
+  font-size: calc(var(--header-height) * 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

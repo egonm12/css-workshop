@@ -1,0 +1,19 @@
+/* Footer */
+footer {
+  position: relative;
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  display: flex;
+  height: var(--footer-height);
+}
+
+footer button {
+  height: 80%;
+  padding: 0 2rem;
+  background: var(--clear-button-background);
+  color: var(--clear-button-text);
+  border-radius: 9999px;
+  text-transform: uppercase;
+}

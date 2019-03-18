@@ -1,0 +1,16 @@
+:root {
+  --link-color: dodgerblue;
+  --toast-offset: 1rem; /* Keep away from edge of viewport */
+
+  --toast-close-button-background: #ddd;
+  --toast-action-button-background: var(--link-color);
+  --toast-action-button-color: white;
+
+  --header-background: hotpink;
+  --header-text: white;
+  --header-height: 3rem;
+
+  --footer-height: 3rem;
+  --clear-button-background: lime;
+  --clear-button-text: hotpink;
+}
